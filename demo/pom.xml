@@ -38,7 +38,11 @@
         </plugin>
         <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
         <!-- NUEVO COMENTARIO  -->
-
+  <!-- NUEVO COMENTARIO  -->
+    <!-- NUEVO COMENTARIO  -->
+      <!-- NUEVO COMENTARIO  -->
+        <!-- NUEVO COMENTARIO  -->
+        
         
         
         <plugin>
