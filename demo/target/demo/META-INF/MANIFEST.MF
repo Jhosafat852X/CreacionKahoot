@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
-Built-By: edtop
-Build-Jdk: 17.0.11
+Built-By: jhosa
+Build-Jdk: BellSoft Liberica 17.0.11
 
