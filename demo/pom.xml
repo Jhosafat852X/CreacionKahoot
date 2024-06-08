@@ -20,12 +20,33 @@
   </properties>
 
   <dependencies>
+
+    <!-- AGREGANDO LA DEPENDECIA DE MONGO-->
+    <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongo-java-driver</artifactId>
+      <version>3.12.14</version>
+    </dependency>
+
+    <!-- AGREGANDO LA DEPENDECIA DE JAKARTA-->
+    <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>6.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
+
   </dependencies>
 
   <build>

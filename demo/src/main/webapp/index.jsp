@@ -6,16 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Inicio de sesiónn Kahoot versión 2.0</title>
+    <title>Inicio de sesión Kahoot versión 2.0</title>
 </head>
 <body>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h2>Bienvenido a Kahoot Version 2.1</h2>
+            <br>
+            <center>
+                <h2>Bienvenido a Kahoot Version 2.1</h2>
+            </center>
             <hr>
-            <h1>Inicio de sesión</h1>
-            <form>
+            <center>
+                <h1>Inicio de sesión</h1>
+            </center>
+
+            <form action="login" method="post">
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo electrónico</label>
                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
@@ -23,7 +29,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password">
+                    <input type="password" class="form-control" id="password" name="password">
                 </div>
                 <button type="submit" class="btn btn-primary">Iniciar sesión</button>
             </form>
