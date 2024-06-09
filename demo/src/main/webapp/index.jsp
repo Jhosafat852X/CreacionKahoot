@@ -24,15 +24,16 @@
             <form action="login" method="post">
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="email" name="correo" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password">
+                    <input type="password" class="form-control" id="password" name="contrasena">
                 </div>
                 <button type="submit" class="btn btn-primary">Iniciar sesión</button>
             </form>
+
         </div>
     </div>
 </div>

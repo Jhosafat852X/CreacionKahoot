@@ -7,9 +7,9 @@ public class ConexionMongo {
     private static MongoDatabase database;
 
     public static void ConexionAMongoBD(){
-        MongoClientURI uri = new MongoClientURI("mongodb://localhost:27017"); // Cambia la URI según tu configuración
+        MongoClientURI uri = new MongoClientURI("mongodb+srv://giovanni:giovanni123@cluster0.wsbcrgh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"); // Cambia la URI según tu configuración
         mongoClient = new MongoClient(uri);
-        database = mongoClient.getDatabase("usuarios");
+        database = mongoClient.getDatabase("ProyectoKahoot2");
     }
 
     public static MongoDatabase getDatabase(){
