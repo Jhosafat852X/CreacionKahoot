@@ -18,6 +18,14 @@ public class CapaDeNegocioMongoUsuarios {
         return user != null;
     }
 
+    public Document obtenerUsuario(String email) {
+        MongoDatabase database = MongoDBConnection.getDatabase();
+        MongoCollection<Document> collection = database.getCollection(COLLECTION_NAME);
+
+        Document query = new Document("correo", email);
+        return collection.find(query).first();
+    }
+
     // Método para obtener todos los datos de la colección "Usuarios"
     // Método para obtener todos los datos de la colección "Usuarios"
     public String obtenerDatosUsuarios() {
