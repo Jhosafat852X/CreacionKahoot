@@ -1,4 +1,4 @@
-<%--
+<%@ page import="Beans.Usuario" %><%--
   Created by IntelliJ IDEA.
   User: giova
   Date: 09/06/2024
@@ -56,7 +56,11 @@
 
 <!-- CONTENEDOR DE BIENVENIDA AL USUARIO -->
 <div class="container">
-    <h2>Bienvenido, ${usuario.nombre}</h2>
+    <%-- Verificar si el usuario está en sesión --%>
+    <% if (session.getAttribute("usuario") != null) { %>
+    <%-- Obtener y mostrar el nombre del usuario --%>
+    <h2>Bienvenido, <%= ((Usuario) session.getAttribute("usuario")).getNombre() %></h2>
+    <% } %>
 </div>
 
 <!-- CONTENEDOR PARA LOS BOTONES -->

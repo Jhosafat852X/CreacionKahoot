@@ -1,3 +1,5 @@
+package Beans;
+
 public class Usuario {
 
     private String _id; // Puedes ajustar el tipo según sea necesario

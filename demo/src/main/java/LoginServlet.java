@@ -1,12 +1,13 @@
+import Beans.Usuario;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import org.bson.Document;
 
 import java.io.IOException;
-
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
     private CapaDeNegocioMongoUsuarios CNMU;
@@ -24,24 +25,20 @@ public class LoginServlet extends HttpServlet {
         if (userDocument != null) {
             String id = userDocument.getString("_id");
             String nombre = userDocument.getString("nombre");
-            String contraseña = userDocument.getString("contraseña"); // Debes evitar almacenar contraseñas en texto plano
+            String contraseñaAlmacenada = userDocument.getString("contraseña");
 
-            // Crear un objeto Usuario si es necesario
-            Usuario usuario = new Usuario(id, correo, contraseña, nombre);
+            if (contrasena.equals(contraseñaAlmacenada)) {
+                Usuario usuario = new Usuario(id, correo, contraseñaAlmacenada, nombre);
 
-            // Guardar el objeto Usuario en la sesión
-            request.getSession().setAttribute("usuario", usuario);
+                HttpSession session = request.getSession();
+                session.setAttribute("usuario", usuario);
 
-            // Redirigir al usuario a la página Home.jsp
-            response.sendRedirect(request.getContextPath() + "/Vistas/Home.jsp");
+                response.sendRedirect(request.getContextPath() + "/Vistas/Home.jsp");
+            } else {
+                response.sendRedirect(request.getContextPath() + "/index.jsp");
+            }
         } else {
-            // Mantener al usuario en la misma página de inicio de sesión
             response.sendRedirect(request.getContextPath() + "/index.jsp");
         }
     }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
-    }
 }
-
